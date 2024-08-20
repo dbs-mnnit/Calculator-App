@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to handle button clicks
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            const buttonText = this.innerText; // Get the text of the clicked button
-
+            let buttonText = this.innerText; // Get the text of the clicked button
+            if(buttonText=== 'x') buttonText = '*';
             if (buttonText === 'RESET') {
                 currentInput = ''; // Clear the input
                 updateDisplay('0'); // Reset display to 0
